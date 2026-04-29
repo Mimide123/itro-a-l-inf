@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- On utilise HTML5 pour compatibilité moderne --> 
+
+<html lang="fr">
+    <!-- Langue définie pour accessibilité -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Support des caractères spéciaux  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Rend le site responsive sur mobile -->
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <h2>Calculatrice</h2>
+
+    <!-- Écran d'affichage -->
+      <!-- /* Fond sombre pour réduire la fatigue visuelle */ -->
+    <input id="display" readonly>
+
+    <div class="keys">
+        <!-- Ligne 1 -->
+         
+        <button onclick="clearDisplay()" class="operator">C</button>
+        <button onclick="del()" class="operator">DEL</button>
+        <button onclick="percent()" class="operator">%</button>
+        <button onclick="insert('/')" class="operator">/</button>
+
+        <!-- Ligne 2 -->
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('*')" class="operator">×</button>
+
+        <!-- Ligne 3 -->
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('-')" class="operator">-</button>
+
+        <!-- Ligne 4 -->
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('+')" class="operator">+</button>
+
+        <!-- Ligne 5 -->
+        <button onclick="toggleSign()">+/-</button>
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+        <button onclick="sqrt()" class="operator">√</button>
+
+        <!-- Résultat -->
+        <button onclick="calculate()" class="equal">=</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
